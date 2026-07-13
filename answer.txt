@@ -22,3 +22,9 @@ Tạo thư mục trên local
 Mở thư mục đó trên terminal
 Gõ câu lệnh npm init playwright@latest để khởi tạo playwright
 Gõ câu lệnh code . để mở thư mục đó tại trình duyệt code
+
+Git branching
+- Xem branch đang có: git branch
+- Tạo branh mới: git branch ten_branch
+- Truy cập vào branch đã có: git checkout ten_branch
+- Tạo branch mới và checkout luôn sang branch đó: git checkout -b ten_branch
