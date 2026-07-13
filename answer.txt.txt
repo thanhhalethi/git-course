@@ -1,4 +1,6 @@
 Câu lệnh để cài đặt email và name là gì?
+git config --global user.email "email"
+git config --global user.name "name"
 
 Cách tạo repo, push code lên repo
 1. Tạo repo trên web GitHub
