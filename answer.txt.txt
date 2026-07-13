@@ -10,6 +10,11 @@ git commit -m"init project"
 git remote add origin git@github.com:thanhhalethi/git-course.git
 git push origin main
 
+Push code lên git sau mỗi update
+git add .
+git commit -m "your commit message"
+git push origin main
+
 Cách tạo project playwright từ ban đầu
 Tạo thư mục trên local
 Mở thư mục đó trên terminal
