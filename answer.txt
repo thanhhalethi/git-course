@@ -5,10 +5,10 @@ git config --global user.name "name"
 Cách tạo repo, push code lên repo
 1. Tạo repo trên web GitHub
 2. Tại terminal, nhập câu lệnh
-git init
+git init -> khởi tạo thư mục được quản lý bởi git (tạo ra 3 vùng: working directory, staging, repository)
 git commit -m"init project"
-git add .
-git commit -m"init project"
+git add . -> đưa toàn bộ file từ vùng working directory vào vùng staging
+git commit -m"init project" -> tạo 1 commit với nội dung bất kỳ
 git remote add origin git@github.com:thanhhalethi/git-course.git
 git push origin main
 
@@ -28,3 +28,7 @@ Git branching
 - Tạo branh mới: git branch ten_branch
 - Truy cập vào branch đã có: git checkout ten_branch
 - Tạo branch mới và checkout luôn sang branch đó: git checkout -b ten_branch
+
+Git merge
+- Đầu tiên cần checkout sang nhánh muốn được merge vào (nhánh target)
+- 
