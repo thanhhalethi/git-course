@@ -43,3 +43,7 @@ Git - Thay đổi commit message sau khi đã commit
 - Vào chế độ dòng lệnh, gõ ":"
 - Lưu và thoát: "wq"
 - Hoặc chỉ cần gõ câu lệnh git commit --amend -m"your message here"
+
+Git - git restore, git reset 
+- Đưa file từ vùng staging về vùng working directory
+git restore --staged ten_file
