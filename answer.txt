@@ -31,4 +31,6 @@ Git branching
 
 Git merge
 - Đầu tiên cần checkout sang nhánh muốn được merge vào (nhánh target)
-- 
+git checkout main
+- Gõ câu lệnh git merge + tên nhánh
+git merge featureA => merge các file trong nhánh featureA vào nhánh main
