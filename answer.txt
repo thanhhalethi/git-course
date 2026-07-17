@@ -42,3 +42,4 @@ Git - Thay đổi commit message sau khi đã commit
 - Thoát khỏi chế độ insert: nhấn ESC
 - Vào chế độ dòng lệnh, gõ ":"
 - Lưu và thoát: "wq"
+- Hoặc chỉ cần gõ câu lệnh git commit --amend -m"your message here"
