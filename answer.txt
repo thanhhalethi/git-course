@@ -34,3 +34,11 @@ Git merge
 git checkout main
 - Gõ câu lệnh git merge + tên nhánh
 git merge featureA => merge các file trong nhánh featureA vào nhánh main
+
+Git - Thay đổi commit message sau khi đã commit
+- Gõ câu lệnh git commit --amend
+- Mặc định là chế độ Xem
+- Để chuyển sang chế độ sửa, gõ "i" (insert)
+- Thoát khỏi chế độ insert: nhấn ESC
+- Vào chế độ dòng lệnh, gõ ":"
+- Lưu và thoát: "wq"
