@@ -45,5 +45,7 @@ Git - Thay đổi commit message sau khi đã commit
 - Hoặc chỉ cần gõ câu lệnh git commit --amend -m"your message here"
 
 Git - git restore, git reset 
+Có 3 vùng: working directory >> staging >> repository
 - Đưa file từ vùng staging về vùng working directory
 git restore --staged ten_file
+- Đưa file từ vùng repository về vùng working directory
