@@ -49,3 +49,4 @@ Có 3 vùng: working directory >> staging >> repository
 - Đưa file từ vùng staging về vùng working directory
 git restore --staged ten_file
 - Đưa file từ vùng repository về vùng working directory
+git reset HEAD~1
