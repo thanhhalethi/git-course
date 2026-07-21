@@ -5,8 +5,8 @@ git config --global user.name "name"
 Cách tạo repo, push code lên repo
 1. Tạo repo trên web GitHub
 2. Tại terminal, nhập câu lệnh
-git init -> khởi tạo thư mục được quản lý bởi git (tạo ra 3 vùng: working directory, staging, repository)
-git commit -m"init project"
+git init -> khởi tạo thư mục được quản lý bởi git (tạo ra 3 vùng: working directory, staging, repository, đưa file từ vùng local sang vùng working directory)
+git commit -m"init project" -> đưa file từ vùng staging sang vùng repository
 git add . -> đưa toàn bộ file từ vùng working directory vào vùng staging
 git commit -m"init project" -> tạo 1 commit với nội dung bất kỳ
 git remote add origin git@github.com:thanhhalethi/git-course.git
@@ -52,5 +52,5 @@ Git - git restore, git reset
 Có 3 vùng: working directory >> staging >> repository
 - Đưa file từ vùng staging về vùng working directory
 git restore --staged ten_file
-- Đưa file từ vùng repository về vùng working directory
+- Đưa 1 commit mới nhất từ vùng repository về vùng working directory
 git reset HEAD~1
