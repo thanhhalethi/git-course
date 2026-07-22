@@ -54,3 +54,7 @@ Có 3 vùng: working directory >> staging >> repository
 git restore --staged ten_file
 - Đưa 1 commit mới nhất từ vùng repository về vùng working directory
 git reset HEAD~1
+
+Run câu lệnh
+- chạy câu lệnh node + tên file (nếu file không nằm trong folder nào)
+- chạy câu lệnh node + tên folder + / + tên file (nếu file không nằm trong folder nào)

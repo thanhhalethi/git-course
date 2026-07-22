@@ -57,3 +57,6 @@ i. chạy lệnh git reset HEAD~1
 - vùng working directory: file2, file3
 - vùng staging: ko
 - vùng repository: file1
+
+---
+
