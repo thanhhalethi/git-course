@@ -20,7 +20,7 @@ git push origin main
 Cách tạo project playwright từ ban đầu
 Tạo thư mục trên local
 Mở thư mục đó trên terminal
-Gõ câu lệnh npm init playwright@latest để khởi tạo playwright
+Gõ câu lệnh `npm init playwright@latest` để khởi tạo playwright
 Gõ câu lệnh code . để mở thư mục đó tại trình duyệt code
 
 Git branching
@@ -58,3 +58,5 @@ git reset HEAD~1
 Run câu lệnh
 - chạy câu lệnh node + tên file (nếu file không nằm trong folder nào)
 - chạy câu lệnh node + tên folder + / + tên file (nếu file không nằm trong folder nào)
+
+Cách thiết kế một test file
