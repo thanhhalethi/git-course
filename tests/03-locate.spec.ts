@@ -4,7 +4,7 @@ import { test } from '@playwright/test'
 
 test.describe('Locate', async () => {
     test("Locate basic", async ({ page }) => {
-        await page.goto("");
+        await page.goto("https://material.playwrightvn.com/");
 
         const bai1Locator = page.locator('//a[@href="01-xpath-register-page.html"]');
         const adsLocator = page.locator("");
