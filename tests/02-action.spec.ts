@@ -4,34 +4,80 @@ import { test } from '@playwright/test'
 
 // goto
 
-test("Navigate basic", async ({ page }) => {
-    await page.goto("https://tailieu.hoctest.com/")
-})
+// test("Navigate basic", async ({ page }) => {
+//     await page.goto("https://tailieu.hoctest.com/")
+// })
 
-test("Navigate with option - referer", async ({ page }) => {
-    await page.goto("https://tailieu.hoctest.com/", {
-        referer: "https://playwrightvn.com"
-    })
-})
+// test("Navigate with option - referer", async ({ page }) => {
+//     await page.goto("https://tailieu.hoctest.com/", {
+//         referer: "https://playwrightvn.com"
+//     })
+// })
 
-test("Navigate with option - timeout", async ({ page }) => {
-    await page.goto("https://tailieu.hoctest.com/", {
-        timeout: 1000
-    });
-})
+// test("Navigate with option - timeout", async ({ page }) => {
+//     await page.goto("https://tailieu.hoctest.com/", {
+//         timeout: 1000
+//     });
+// })
 
-test("Navigate with option - waitUntil", async ({ page }) => {
-    await page.goto("https://tailieu.hoctest.com/", {
-        waitUntil: "load"
-    });
-})
+// test("Navigate with option - waitUntil", async ({ page }) => {
+//     await page.goto("https://tailieu.hoctest.com/", {
+//         waitUntil: "load"
+//     });
+// })
 
-// click
+// // click
 
+// test("Click", async ({ page }) => {
+//     await page.goto("https://material.playwrightvn.com/018-mouse.html");
+//     const clickArea = page.locator("//div[@id='clickArea']");
+//     await clickArea.click();
+// })
+
+// fill
+
+// test("Fill", async ({ page }) => {
+//     await page.goto("https://material.playwrightvn.com/03-input-practice.html");
+//     const input = page.locator("//input[@id='username']");
+//     await input.fill("hoctest1");
+// })
+
+// press
+
+// test("Press", async ({ page }) => {
+//     await page.goto("https://material.playwrightvn.com/03-input-practice.html");
+//     const input = page.locator("//input[@id='username']");
+//     await input.press("a");
+// })
+
+// pressSequentially
+
+// test("pressSequentially", async ({ page }) => {
+//     await page.goto("https://material.playwrightvn.com/03-input-practice.html");
+//     const input = page.locator("//input[@id='username']");
+//     await input.pressSequentially("aaaaahoctest", {
+//         delay: 200,
+//         timeout: 10_000
+//     })
+// })
+
+//https://material.playwrightvn.com/018-mouse.html
 test("Click", async ({ page }) => {
     await page.goto("https://material.playwrightvn.com/018-mouse.html");
     const clickArea = page.locator("//div[@id='clickArea']");
-    await clickArea.click();
+    // click
+    // await clickArea.click();
+
+    // double click
+    // await clickArea.dblclick();
+
+    // right click, left click
+    await clickArea.click({
+        // button: 'right',
+        button: 'left',
+    }
+    )
 })
+
 
 
