@@ -62,21 +62,41 @@ import { test } from '@playwright/test'
 // })
 
 //https://material.playwrightvn.com/018-mouse.html
-test("Click", async ({ page }) => {
-    await page.goto("https://material.playwrightvn.com/018-mouse.html");
-    const clickArea = page.locator("//div[@id='clickArea']");
-    // click
-    // await clickArea.click();
+// test("Click", async ({ page }) => {
+//     await page.goto("https://material.playwrightvn.com/018-mouse.html");
+//     const clickArea = page.locator("//div[@id='clickArea']");
+// click
+// await clickArea.click();
 
-    // double click
-    // await clickArea.dblclick();
+// double click
+// await clickArea.dblclick();
 
-    // right click, left click
-    await clickArea.click({
-        // button: 'right',
-        button: 'left',
-    }
-    )
+// right click, left click
+//     await clickArea.click({
+//         // button: 'right',
+//         button: 'left',
+//     }
+//     )
+// })
+
+test("Radio button / Checkbox", async ({ page }) => {
+    await page.goto("https://material.playwrightvn.com/01-xpath-register-page.html");
+    const radioMale = page.locator("//input[@id='male']");
+    const checkboxReading = page.locator("//input[@id='reading']");
+    const checkboxTraveling = page.locator("//input[@id='traveling']");
+
+    // kiem tra radio/checkbox da duoc check hay chua
+    const isChecked = await radioMale.isChecked();
+
+    // tich vao checkbox/radio
+    await radioMale.check();
+    await checkboxReading.check();
+    await checkboxTraveling.check();
+
+    // bo tich tai checkbox/radio
+    await checkboxTraveling.uncheck();
+
+
 })
 
 
