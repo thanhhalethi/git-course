@@ -116,3 +116,19 @@ test("date, range, color picker", async ({ page }) => {
     await colorPicker.fill("#24f4a3"); // fill gia tri hex
 })
 
+
+// file upload
+
+test("File upload", async ({ page }) => {
+    await page.goto(registerPage);
+    const fileUpload = page.locator("//input[@id='profile']");
+    await fileUpload.setInputFiles("exercise.txt");
+})
+
+// hover
+
+test("hover", async ({ page }) => {
+    await page.goto(registerPage);
+    const hoverField = page.locator("//div[@class='tooltip']");
+    await hoverField.hover();
+})
