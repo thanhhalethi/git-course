@@ -2,6 +2,7 @@
 
 import { test } from '@playwright/test'
 
+const registerPage = "https://material.playwrightvn.com/01-xpath-register-page.html"
 // goto
 
 // test("Navigate basic", async ({ page }) => {
@@ -80,7 +81,7 @@ import { test } from '@playwright/test'
 // })
 
 test("Radio button / Checkbox", async ({ page }) => {
-    await page.goto("https://material.playwrightvn.com/01-xpath-register-page.html");
+    await page.goto(registerPage);
     const radioMale = page.locator("//input[@id='male']");
     const checkboxReading = page.locator("//input[@id='reading']");
     const checkboxTraveling = page.locator("//input[@id='traveling']");
@@ -95,9 +96,23 @@ test("Radio button / Checkbox", async ({ page }) => {
 
     // bo tich tai checkbox/radio
     await checkboxTraveling.uncheck();
-
-
 })
 
+// date, range, color picker
+// sẽ có html là: 
+// <input type="date"> 
+// <input type = "range">
+// <input type = "color">
 
+test("date, range, color picker", async ({ page }) => {
+    await page.goto(registerPage);
+
+    const datePicker = page.locator("//input[@id='dob']");
+    const rangeSlide = page.locator("//input[@id='rating']");
+    const colorPicker = page.locator("//input[@id='favcolor']");
+
+    await datePicker.fill("2026-08-01"); // bat buoc phai fill format yyyy-mm-dd
+    await rangeSlide.fill("5");
+    await colorPicker.fill("#24f4a3"); // fill gia tri hex
+})
 
