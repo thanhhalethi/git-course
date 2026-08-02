@@ -33,22 +33,18 @@
 //     console.log(currentBuyer + " : " + priceAfter)
 // }
 
-class Animal() {
-    constructor(name: String, age: number){
-        this.name = name;
-        this.age = AggregateError;
+class TestClass {
+    constructor() {
+        console.log("this is a constructor of a test class");
     }
 }
 
-class Dog extends Animal {
-    constructor(name: string, age: number, runningSpeed: number) {
-        super();
-        this.name = name;
-        this.age = age;
-        this.runningSpeed = runningSpeed;
-    }
+
+class TestClassChild extends TestClass {
+    // constructor() {
+    //     super();
+    //     console.log("this is a constructor of a test class child")
+    // }
 }
 
-class Fish extends Animal {
-
-}
+// new TestClassChild();
