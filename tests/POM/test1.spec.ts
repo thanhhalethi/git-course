@@ -1,8 +1,11 @@
-import { test } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 // import { BasePage } from "./page/BasePage";
 import { RegisterPage } from "./page/RegisterPage";
 
 test("Register Page tests", async ({ page }) => {
+
+    const username = "haltt";
+    const email = "halee@gmail.com";
 
     // let basePage = new BasePage(page);
     let registerPage = new RegisterPage(page);
@@ -10,6 +13,8 @@ test("Register Page tests", async ({ page }) => {
     await test.step("Step 1: Navigate to Register Page", async () => {
         await registerPage.goToRegisterPage();
     })
+
+    // --- fill in EACH element ---
 
     // await test.step("Step 2: Fill in Username textbox", async () => {
     //     await registerPage.fillInUsername("haltt");
@@ -23,10 +28,12 @@ test("Register Page tests", async ({ page }) => {
     //     await registerPage.checkHobbies("cooking");
     // })
 
+    // --- fill in ALL elements ---
+
     await test.step("Fill in all information", async () => {
         await registerPage.fillFormRegister({
-            username: "haltt",
-            email: "haltt@gmail.com",
+            username: username,
+            email: email,
             gender: "Male",
             hobbies: "Reading",
             interests: "Technology",
@@ -35,5 +42,20 @@ test("Register Page tests", async ({ page }) => {
             profilePictureFilePath: "string",
             biography: "string",
         });
+    })
+
+    await test.step("Click button Register", async () => {
+        await registerPage.clickRegisterButton();
+    })
+
+    await test.step("Verify all information in table", async () => {
+        const userInfo = await registerPage.getInformationInTable();
+        const actualUsername = userInfo.username;
+        const actualEmail = userInfo.email;
+        const actualOtherInformation = userInfo.generalInformation;
+
+        expect(actualUsername).toBe(username);
+        expect(actualEmail).toBe(email);
+        expect(actualOtherInformation).toContain("reading");
     })
 })
