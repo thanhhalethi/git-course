@@ -22,4 +22,8 @@ export class BasePage {
         await this.page.locator(xpath).fill(content);
     }
 
+    async selectCheckbox(xpath: string) {
+        await this.page.locator(xpath).check();
+    }
+
 }
